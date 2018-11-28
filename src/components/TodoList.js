@@ -5,14 +5,14 @@ import Todo from './Todo'
 const TodoList = ({ todos, toggleTodo, deleteTodo, editTodo, updateTodo }) => (
     <div>
         {todos.map(todo =>
-        <Todo
-            key={todo.id}
-            {...todo}
-            handleToggle={() => toggleTodo(todo.id)}
-            handleDelete={() => deleteTodo(todo.id)}
-            handleEdit={() => editTodo(todo.id, todo.text)}
-            handleUpdate={(e) => updateTodo(todo.id, e.target.value)}
-        />
+            <Todo
+                key={todo.id}
+                {...todo}
+                handleToggle={() => toggleTodo(todo.id)}
+                handleDelete={() => deleteTodo(todo.id)}
+                handleEdit={() => editTodo(todo.id, todo.text)}
+                handleUpdate={(e) => updateTodo(todo.id, e.target.value)}
+            />
         )}
     </div>
 )
